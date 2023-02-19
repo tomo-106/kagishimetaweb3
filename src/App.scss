@@ -1,5 +1,26 @@
+body {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+header {
+    background-color: #63b554;
+    width: 100%;
+}
 .logo {
+    width: 1000px;
+    margin: auto;
+    color: #ffffff;
+    font-weight: 600;
     img {
         width: 50px;
+        vertical-align: middle;
     }
+    .title {
+        vertical-align: middle;
+        font-size: 1.4rem;
+    }
+}
+.container {
+    width: 1000px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import logo from "./logo.svg"
+import logo from "./logo.svg";
 
 function App() {
   return (
@@ -8,11 +8,14 @@ function App() {
       <header>
         <nav>
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <div>
+              <img src={logo} alt="logo" />
+              <span className="title">鍵閉めたかなWeb3</span>
+            </div>
           </div>
         </nav>
       </header>
-      <section></section>
+      <section className="container"></section>
     </div>
   );
 }
