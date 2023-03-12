@@ -1,19 +1,34 @@
-import React,{ createContext, useContext, useState } from "react";
-import MenuButtonSpan from "./MenuButtonSpan";
+import React, { createContext, useContext, useState } from "react";
 import { UserContext } from "../App";
+import { useEffect } from "react";
+import "../App.scss";
 
 function MenuButtonA() {
-    const { buttonClass, setButtonClass } = useContext(UserContext);
+  const { buttonChild, setbuttonChild } = useContext(UserContext);
+
+  useEffect(() => {
+    setbuttonChild([...buttonChild]);
+  }, []);
 
   return (
     <>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
-       <MenuButtonSpan ></MenuButtonSpan>
-       
-       
-        <span className="material-symbols-outlined">help</span>
-        <span className="menu_text">使い方</span>
-      </a>
+      <ul className="menu">
+        {buttonChild.map(
+          (
+            buttonChild: { url: string; icon: string; text: string },
+            index: number
+          ) => (
+            <li key={buttonChild.text}>
+              <a href={buttonChild.url} rel="noopener noreferrer">
+                <span className="material-symbols-outlined">
+                  {buttonChild.icon}
+                </span>
+                <span className="menu_text">{buttonChild.text}</span>
+              </a>
+            </li>
+          )
+        )}
+      </ul>
     </>
   );
 }

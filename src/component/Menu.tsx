@@ -1,10 +1,11 @@
 import React from "react";
-import MenuButton from "./MenuButton";
+import MenuButtonA from "./MenuButtonA";
+import "../App.scss";
 
 function Menu() {
   return (
     <>
-      <MenuButton></MenuButton>
+      <MenuButtonA></MenuButtonA>
     </>
   );
 }
